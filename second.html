@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -119,6 +119,12 @@
             text-align: center;
             width: 300px;
             margin: 50px auto;
+            display: none;
+        }
+
+        /* Show the form only when its ID is targeted */
+        #registration-form:target {
+            display: block;
         }
 
         .form-container h2 {
