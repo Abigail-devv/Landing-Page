@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Data</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+      .container {
+max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+header {
+display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+header h1 {
+            font-size: 24px;
+            color: #007b5e;
+        }
+
+        header nav a {
+            margin-right: 20px;
+text-decoration: none;
+            color: #333;
+        }
+
+        header nav a:last-child {
+            margin-right: 0;
+        }
+
+header button {
+            background-color: #007b5e;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+border-radius: 5px;
+            cursor: pointer;
+        }
+
+        header button:hover {
+            background-color: #005c46;
+        }
+
+main {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        main h2 {
+            font-size: 28px;
+color: #333;
+        }
+
+        main.highlight {
+            color: #007b5e;
+        }
+
+        main p {
+color: #666;
+            margin: 20px 0;
+        }
+
+       .buttons {
+            margin: 30px 0;
+        }
+
+.buttons button {
+            background-color: #007b5e;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+border-radius: 5px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+      .buttons button:last-child {
+margin-right: 0;
+        }
+
+       .buttons button:hover {
+            background-color: #005c46;
+        }
+
+       .refer-banner {
+background-color: #007b5e;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            display: inline-block;
+margin-top: 20px;
+        }
+
+      .refer-banner h3 {
+            margin: 0;
+            font-size: 20px;
+font-weight: bold;
+        }
+
+        /* Registration Form Styles */
+      .form-container {
+            background-color: white;
+            padding: 30px;
+border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+margin: 50px auto;
+            display: none;
+        }
+
+      .form-container h2 {
+            margin-bottom: 20px;
+color: #333;
+        }
+
+      .social-login button {
+            background-color: #007b5e;
+            color: white;
+border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin: 5px 0;
+            width: 100%;
+cursor: pointer;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        form label {
+display: block;
+            margin-bottom: 5px;
+            color: #333;
+            text-align: left;
+        }
+
+form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        form button {
+            width: 100%;
+background-color: #007b5e;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #005c46;
+
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Main Interface -->
+<header>
+            <h1>Cool Data</h1>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Referral Program</a>
+<a href="#">Prizes</a>
+                <a href="#">Terms and Conditions</a>
+            </nav>
+            <button id="register-btn">Register</button>
+</header>
+        <main id="main-content">
+            <h2>Welcome to the <span class="highlight">Cool Data</span> Referral Contest!
+Join our exclusive referral contest and get paid to talk about Cool Data. Winners will receive fantastic prizes among the top participants with most active referrals! 
+            <div class="buttons">
+                <button>Refer a Friend</button>
+<button id="register-participate-btn">Register to Participate</button>
+            </div>
+            <div class="refer-banner">
+                <h3>REFER A FRIEND</h3>
+</div>
+        </main>
+
+        <!-- Sign in - Login Form -->
+        <div class="form-container" id="registration-form">
+            <h2>Register</h2>
+            <div class="social-login">
+<button>Google</button>
+                <button>Apple</button>
+                <button>Facebook</button>
+            </div>
+<form>
+                <label for="name">Name*</label>
+                <input type="text" id="name"  placeholder="Enter your name"  required>
+                <label for="email">Email*</label>
+<input type="email" id="email" placeholder="Enter your email" required>
+                <label for="password">Password*</label>
+                <input type="password" id="password" placeholder="Create a password" required>
+<button type="submit">Get started</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Java Script to be used to redirect to the register form
+document.getElementById("register-btn").addEventListener("click", showForm);
+        document.getElementById("register-participate-btn").addEventListener("click", showForm);
+
+        function showForm() {
+            document.getElementById("main-content").style.display = "none";
+            document.getElementById("registration-form").style.display = "block";
+        }
+    </script>
+</body>
+</html>
